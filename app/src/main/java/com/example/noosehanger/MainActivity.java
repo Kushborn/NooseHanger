@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     EditText etInput;
     TextView tvForsøgteBogstaver;
     String forsøgteBogstaver;
-    final String FORSØGTE_BOGSTAVER = "Forsøgte bogstver: ";
+    final String FORSØGTE_BOGSTAVER = "Forsøgte bogstaver: ";
     TextView tvLivTilbage;
     String livTilbage;
 
@@ -178,8 +178,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void startTaberAktivitet() {
+
         Intent intent = new Intent(this, TaberAktivitet.class);
+        intent.putExtra("TABT", ordDerSkalGættes);
         startActivity(intent);
+
     }
 
     public void startVinderAktivitet() {
