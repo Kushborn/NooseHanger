@@ -126,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(s.length() != 0) {
                     checkOmBogstavErIOrd(s.charAt(0));
+                    etInput.setText("");
                 }
             }
             @Override
