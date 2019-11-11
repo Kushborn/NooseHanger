@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class VinderAktivitet extends AppCompatActivity {
 
-    Button gåtilbage;
+    Button gåtilbage, highscoreKnap;
 
     TextView livTilbage;
 
@@ -21,6 +21,7 @@ public class VinderAktivitet extends AppCompatActivity {
 
         gåtilbage = findViewById(R.id.gåtilbagevinder);
         livTilbage = findViewById(R.id.tvLiv);
+        highscoreKnap = findViewById(R.id.highscorevinder);
 
         livTilbage.setText(getIntent().getStringExtra("VANDT"));
 
@@ -31,5 +32,7 @@ public class VinderAktivitet extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }

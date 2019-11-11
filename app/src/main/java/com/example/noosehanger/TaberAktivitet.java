@@ -11,7 +11,8 @@ import android.widget.TextView;
 public class TaberAktivitet extends AppCompatActivity {
 
 
-    Button gåtilbage;
+    Button gåtilbage, highscoreKnap;
+
 
     TextView tabteOrd;
 
@@ -22,6 +23,7 @@ public class TaberAktivitet extends AppCompatActivity {
 
         tabteOrd = findViewById(R.id.ordIkkeFundet);
         gåtilbage = findViewById(R.id.gåtilbagetaber);
+        highscoreKnap = findViewById(R.id.highscoretaber);
 
 
         tabteOrd.setText(getIntent().getStringExtra("TABT"));
@@ -33,5 +35,7 @@ public class TaberAktivitet extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }

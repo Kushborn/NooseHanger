@@ -1,13 +1,15 @@
 <resources>
-    <string name="app_name">NooseHanger</string>
+
+    <string name="app_name">s124317 Benjamins NooseHanger</string>
     <string name="gæt">Gæt et ord</string>
     <string name="skriv">Indtast et bogstav...</string>
     <string name="livTilbage">X X X X X</string>
     <string name="forfraKnap">Start forfra</string>
-    <string name="titel">Galgeleg</string>
+    <string name="titel">Noose Hanger</string>
     <string name="forsøgt">Forsøgte bogstaver: </string>
     <string name="dutabte">Du tabte, ordet var:</string>
     <string name="duvandt">Du vandt... med så mange liv tilbage:</string>
     <string name="gåtilbage">Gå tilbage</string>
+    <string name="highscore">Se highscore</string>
 
 </resources>

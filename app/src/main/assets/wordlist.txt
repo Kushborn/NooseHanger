@@ -8,3 +8,4 @@ kokosmælk
 billedramme
 stuebirk
 lysekrone
+skov

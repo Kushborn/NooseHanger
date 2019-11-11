@@ -26,7 +26,7 @@
         android:id="@+id/gåtilbagetaber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="284dp"
+        android:layout_marginTop="228dp"
         android:background="@drawable/button"
         android:text="@string/gåtilbage"
         android:textColor="@color/skrift"
@@ -46,6 +46,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/highscoretaber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/highscore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/button"
+        android:textColor="@color/skrift"
+        app:layout_constraintTop_toBottomOf="@+id/gåtilbagetaber" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
