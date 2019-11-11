@@ -11,5 +11,7 @@
     <string name="duvandt">Du vandt... med så mange liv tilbage:</string>
     <string name="gåtilbage">Gå tilbage</string>
     <string name="highscore">Se highscore</string>
+    <string name="user">Username</string>
+    <string name="score">+9000</string>
 
 </resources>
