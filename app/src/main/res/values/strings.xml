@@ -5,4 +5,5 @@
     <string name="livTilbage">X X X X X</string>
     <string name="forfraKnap">Start forfra</string>
     <string name="titel">Galgeleg</string>
+    <string name="forsøgt">Forsøgte bogstaver: </string>
 </resources>
