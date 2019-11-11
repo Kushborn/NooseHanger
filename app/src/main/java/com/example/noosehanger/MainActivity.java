@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -84,6 +88,32 @@ public class MainActivity extends AppCompatActivity {
         tvOrdDerskalGættes = findViewById(R.id.tvForsøgteBogstaver);
         tvLivTilbage = findViewById(R.id.tvLivTilbage);
 
+
+        InputStream mInputStream = null;
+        Scanner in = null;
+        String o = "";
+
+        try {
+            mInputStream = getAssets().open("wordlist.txt");
+            in = new Scanner(mInputStream);
+            while (in.hasNext()) {
+                o = in.next();
+                ordListe.add(o);
+            }
+        } catch (IOException e) {
+            Toast.makeText(MainActivity.this, e.getClass().getSimpleName() + ": " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        } finally {
+            if(in != null) {
+                in.close();
+            } try {
+                if(mInputStream != null) {
+                    mInputStream.close();
+                }
+            } catch (IOException e) {
+                Toast.makeText(MainActivity.this, e.getClass().getSimpleName()+": "+ e.getMessage(), Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+            }
+        }
 
     }
 
