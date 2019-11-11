@@ -7,7 +7,7 @@
     <string name="titel">Galgeleg</string>
     <string name="forsøgt">Forsøgte bogstaver: </string>
     <string name="dutabte">Du tabte, ordet var:</string>
-    <string name="duvandt">Du vandt... denne gang!</string>
+    <string name="duvandt">Du vandt... med så mange liv tilbage:</string>
     <string name="gåtilbage">Gå tilbage</string>
 
 </resources>

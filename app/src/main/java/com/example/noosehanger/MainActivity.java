@@ -186,7 +186,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startVinderAktivitet() {
+
         Intent intent = new Intent(this, VinderAktivitet.class);
+        intent.putExtra("VANDT", livTilbage);
         startActivity(intent);
     }
 

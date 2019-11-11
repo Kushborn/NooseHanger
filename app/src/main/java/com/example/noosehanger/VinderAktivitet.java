@@ -6,10 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class VinderAktivitet extends AppCompatActivity {
 
     Button gåtilbage;
+
+    TextView livTilbage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +20,9 @@ public class VinderAktivitet extends AppCompatActivity {
         setContentView(R.layout.activity_vinder_aktivitet);
 
         gåtilbage = findViewById(R.id.gåtilbagevinder);
+        livTilbage = findViewById(R.id.tvLiv);
+
+        livTilbage.setText(getIntent().getStringExtra("VANDT"));
 
         gåtilbage.setOnClickListener(new View.OnClickListener() {
             @Override

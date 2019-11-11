@@ -18,22 +18,32 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/skrift"
         android:textStyle="bold"
-        android:textSize="24sp"
+        android:textSize="20sp"
         />
 
     <Button
         android:id="@+id/gåtilbagevinder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="332dp"
+        android:layout_marginTop="176dp"
+        android:background="@drawable/button"
         android:text="@string/gåtilbage"
         android:textColor="@color/skrift"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:background="@drawable/button"
+        app:layout_constraintHorizontal_bias="0.497"
 
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLiv" />
+
+    <TextView
+        android:id="@+id/tvLiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:textColor="@color/skrift"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
