@@ -8,7 +8,7 @@
     <string name="titel">Noose Hanger</string>
     <string name="forsøgt">Forsøgte bogstaver: </string>
     <string name="dutabte">Du tabte, ordet var:</string>
-    <string name="duvandt">Du vandt... med så mange liv tilbage:</string>
+    <string name="duvandt">Du vandt med så mange liv tilbage:</string>
     <string name="gåtilbage">Gå tilbage</string>
     <string name="highscore">Se highscore</string>
     <string name="user">Username</string>

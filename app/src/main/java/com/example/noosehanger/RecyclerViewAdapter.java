@@ -22,33 +22,36 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private static final String TAG = "RecyclerViewAdapter";
 
-    private ArrayList<String> userNames = new ArrayList<>();
-    private ArrayList<Integer> images = new ArrayList<>();
-    private ArrayList<String> scores = new ArrayList<>();
+    private ArrayList<String> userNames;
+    private ArrayList<Integer> mImages;
+    private ArrayList<String> userScores;
     private Context mContext;
 
-    public RecyclerViewAdapter(Context mContext, ArrayList<String> userNames, ArrayList<Integer> images, ArrayList<String> scores) {
+
+    public RecyclerViewAdapter(Context mContext, ArrayList<String> userNames, ArrayList<Integer> mImages, ArrayList<String> userScores) {
         this.userNames = userNames;
-        this.images = images;
-        this.scores = scores;
+        this.mImages = mImages;
+        this.userScores = userScores;
         this.mContext = mContext;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem, parent);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        Log.d(TAG, "onBindViewHolder: calles.");
-        Glide.with(mContext).asBitmap().load(images.get(position)).into(holder.image);
+        Log.d(TAG, "onBindViewHolder: called.");
+        Glide.with(mContext).asBitmap().load(mImages.get(position)).into(holder.userImage);
 
-        holder.name.setText(userNames.get(position));
+        holder.userName.setText(userNames.get(position));
+        holder.userScore.setText(userScores.get(position));
 
+        /*
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +61,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             }
         });
 
+        */
     }
 
     @Override
@@ -67,18 +71,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-
-        CircleImageView image;
-        TextView name, score;
+        CircleImageView userImage;
+        TextView userName, userScore;
         RelativeLayout parentLayout;
 
 
         public ViewHolder(@NonNull View itemView) {
-            super(itemView);
 
-            image = itemView.findViewById(R.id.profile_image);
-            name = itemView.findViewById(R.id.name);
-            score = itemView.findViewById(R.id.score);
+            super(itemView);
+            userImage = itemView.findViewById(R.id.profile_image);
+            userName = itemView.findViewById(R.id.username);
+            userScore = itemView.findViewById(R.id.userscore);
 
         }
     }

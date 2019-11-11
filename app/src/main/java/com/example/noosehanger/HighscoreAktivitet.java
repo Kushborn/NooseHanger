@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 
 public class HighscoreAktivitet extends AppCompatActivity {
@@ -17,9 +17,6 @@ public class HighscoreAktivitet extends AppCompatActivity {
     private ArrayList<String> mScores = new ArrayList<>();
     private ArrayList<Integer> mImageUrls = new ArrayList<>();
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,28 +24,41 @@ public class HighscoreAktivitet extends AppCompatActivity {
 
         Log.d(TAG, "InitImageBitMaps: laver bitmaps.");
 
-        initImageBitamsp();
-
+        initImageBitmaps();
 
     }
 
-    private void initImageBitamsp() {
+    private void initImageBitmaps() {
 
         mImageUrls.add(R.drawable.reaper);
         mUserNames.add("Benjamin");
         mScores.add("9000");
 
-        mImageUrls.add(R.drawable.elephant);
+        mImageUrls.add(R.drawable.unicorn);
         mUserNames.add("Alexandra");
         mScores.add("8999");
+
 
         mImageUrls.add(R.drawable.doge);
         mUserNames.add("Douglas");
         mScores.add("6000");
 
-        mImageUrls.add(R.drawable.unicorn);
+
+        mImageUrls.add(R.drawable.elephant);
         mUserNames.add("Birte");
         mScores.add("666");
+
+        mImageUrls.add(R.drawable.cat);
+        mUserNames.add("Glenn");
+        mScores.add("420");
+
+        mImageUrls.add(R.drawable.bear);
+        mUserNames.add("Daniel");
+        mScores.add("10001");
+
+        mImageUrls.add(R.drawable.ghost);
+        mUserNames.add("Kristian");
+        mScores.add("4200");
 
 
         initRecyclerView();
