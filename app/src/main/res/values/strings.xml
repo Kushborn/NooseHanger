@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NooseHanger</string>
+    <string name="gæt">Gæt et ord</string>
+    <string name="skriv">Skriv et ord...</string>
+    <string name="livTilbage">X X X X X</string>
+    <string name="forfraKnap">Start forfra</string>
+    <string name="titel">Galgeleg</string>
 </resources>
