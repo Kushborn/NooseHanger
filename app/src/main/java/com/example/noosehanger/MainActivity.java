@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                 visOrdSkærm();
 
                 if(!ordVistString.contains("_")) {
-                    //ny aktivitet
+
                     startVinderAktivitet();
                 }
             }
@@ -151,10 +151,10 @@ public class MainActivity extends AppCompatActivity {
             nedsætOgVisLivTilbage();
 
             if(livTilbage.isEmpty()) {
-                //NY aktivititet
+
 
                 startTaberAktivitet();
-                //tvOrdDerskalGættes.setText(ordDerSkalGættes);
+
             }
         }
 

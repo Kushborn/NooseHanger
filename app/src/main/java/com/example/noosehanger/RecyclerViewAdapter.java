@@ -51,17 +51,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.userName.setText(userNames.get(position));
         holder.userScore.setText(userScores.get(position));
 
-        /*
-        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "onClick: clicked on: " + userNames.get(position));
-
-                Toast.makeText(mContext, userNames.get(position), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        */
     }
 
     @Override
@@ -73,8 +62,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         CircleImageView userImage;
         TextView userName, userScore;
-        RelativeLayout parentLayout;
-
 
         public ViewHolder(@NonNull View itemView) {
 

@@ -30,15 +30,13 @@
 
     <TextView
         android:id="@+id/userscore"
-        android:layout_width="wrap_content"
+        android:layout_width="74dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="154dp"
+        android:layout_marginStart="244dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="28dp"
-        android:layout_toEndOf="@+id/username"
-        android:text="@string/score"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@+id/profile_image"
         android:textColor="@color/skrift" />
 
 </RelativeLayout>
