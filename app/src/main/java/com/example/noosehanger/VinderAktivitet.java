@@ -33,6 +33,13 @@ public class VinderAktivitet extends AppCompatActivity {
             }
         });
 
+        highscoreKnap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VinderAktivitet.this, HighscoreAktivitet.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

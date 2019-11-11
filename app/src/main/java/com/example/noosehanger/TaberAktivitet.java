@@ -36,6 +36,13 @@ public class TaberAktivitet extends AppCompatActivity {
             }
         });
 
+        highscoreKnap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TaberAktivitet.this, HighscoreAktivitet.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
