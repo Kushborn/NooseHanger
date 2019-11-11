@@ -2,6 +2,7 @@ package com.example.noosehanger;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -141,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(!ordVistString.contains("_")) {
                     //ny aktivitet
-                    tvLivTilbage.setText("Du vandt");
+                    startVinderAktivitet();
                 }
             }
         }
@@ -151,8 +152,9 @@ public class MainActivity extends AppCompatActivity {
 
             if(livTilbage.isEmpty()) {
                 //NY aktivititet
-                tvLivTilbage.setText("Du tabte");
-                tvOrdDerskalGættes.setText(ordDerSkalGættes);
+
+                startTaberAktivitet();
+                //tvOrdDerskalGættes.setText(ordDerSkalGættes);
             }
         }
 
@@ -172,6 +174,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void genstartSpil(View v) {
         startSpil();
+    }
+
+
+    public void startTaberAktivitet() {
+        Intent intent = new Intent(this, TaberAktivitet.class);
+        startActivity(intent);
+    }
+
+    public void startVinderAktivitet() {
+        Intent intent = new Intent(this, VinderAktivitet.class);
+        startActivity(intent);
     }
 
 
