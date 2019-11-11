@@ -44,7 +44,7 @@ public class HighscoreAktivitet extends AppCompatActivity {
         mScores.add("6000");
 
 
-        mImageUrls.add(R.drawable.elephant);
+        mImageUrls.add(R.drawable.bird);
         mUserNames.add("Birte");
         mScores.add("666");
 
@@ -60,6 +60,25 @@ public class HighscoreAktivitet extends AppCompatActivity {
         mUserNames.add("Kristian");
         mScores.add("4200");
 
+        mImageUrls.add(R.drawable.elephant);
+        mUserNames.add("Birte");
+        mScores.add("666");
+
+        mImageUrls.add(R.drawable.pikapng);
+        mUserNames.add("Simon");
+        mScores.add("3333");
+
+        mImageUrls.add(R.drawable.frog);
+        mUserNames.add("Birte");
+        mScores.add("666");
+
+        mImageUrls.add(R.drawable.mime);
+        mUserNames.add("Mr. Mime");
+        mScores.add("2200");
+
+        mImageUrls.add(R.drawable.squirtle);
+        mUserNames.add("Squirtle");
+        mScores.add("5550");
 
         initRecyclerView();
 
