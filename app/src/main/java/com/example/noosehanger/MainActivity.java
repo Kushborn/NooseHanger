@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +17,6 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
-
 
 
     TextView tvOrdDerskalGættes;
@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         for(char character : ordVistCharArray) {
             s += character + " ";
         }
-
         tvOrdDerskalGættes.setText(s);
     }
 
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         visBogstavIOrd(ordVistCharArray[0]);
-        visBogstavIOrd(ordVistCharArray[ordVistCharArray.length+1]);
+        visBogstavIOrd(ordVistCharArray[ordVistCharArray.length-1]);
         ordVistString = String.valueOf(ordVistCharArray);
 
         visOrdSkærm();
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         forsøgteBogstaver = " ";
         tvForsøgteBogstaver.setText(FORSØGTE_BOGSTAVER);
 
-        livTilbage = " X X X X X ";
+        livTilbage = " X X X X X";
         tvLivTilbage.setText(livTilbage);
 
     }
@@ -84,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ordListe = new ArrayList<String>();
+        ordListe = new ArrayList<>();
         tvOrdDerskalGættes = findViewById(R.id.tvOrdatBliveGættet);
         etInput = findViewById(R.id.etInput);
-        tvOrdDerskalGættes = findViewById(R.id.tvForsøgteBogstaver);
+        tvForsøgteBogstaver = findViewById(R.id.tvForsøgteBogstaver);
         tvLivTilbage = findViewById(R.id.tvLivTilbage);
 
 
@@ -141,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 visOrdSkærm();
 
                 if(!ordVistString.contains("_")) {
+                    //ny aktivitet
                     tvLivTilbage.setText("Du vandt");
                 }
             }
@@ -149,7 +149,29 @@ public class MainActivity extends AppCompatActivity {
         else {
             nedsætOgVisLivTilbage();
 
+            if(livTilbage.isEmpty()) {
+                //NY aktivititet
+                tvLivTilbage.setText("Du tabte");
+                tvOrdDerskalGættes.setText(ordDerSkalGættes);
+            }
         }
+
+        if(forsøgteBogstaver.indexOf(b) < 0) {
+            forsøgteBogstaver += b + ", ";
+            String besked = FORSØGTE_BOGSTAVER + forsøgteBogstaver;
+            tvForsøgteBogstaver.setText(besked);
+        }
+    }
+
+    void nedsætOgVisLivTilbage() {
+        if(!livTilbage.isEmpty()) {
+            livTilbage = livTilbage.substring(0, livTilbage.length() - 2);
+            tvLivTilbage.setText(livTilbage);
+        }
+    }
+
+    public void genstartSpil(View v) {
+        startSpil();
     }
 
 
